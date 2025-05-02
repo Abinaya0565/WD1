@@ -1,191 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Elegant Events | Plan Your Perfect Day</title>
-  <style>
-    /* Reset and base styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-    }
-
-    /* Navigation styles */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: transparent;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      transition: all 0.4s ease;
-      z-index: 1000;
-    }
-
-    nav.scrolled {
-      background-color: #1a1a1a;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    }
-
-    .logo {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #ffffff;
-      letter-spacing: 2px;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-    }
-
-    .nav-links li {
-      margin-left: 25px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: white;
-      font-size: 1.1rem;
-      transition: color 0.3s ease, border-bottom 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #ff6b6b;
-      border-bottom: 2px solid #ff6b6b;
-    }
-
-    /* Section styles */
-    .section {
-      padding: 120px 20px;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #f3f3f3 0%, #e2e2e2 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .section h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .section p {
-      font-size: 1.3rem;
-      max-width: 800px;
-    }
-
-    #home {
-      background: linear-gradient(135deg, #ff6b6b 0%, #f06595 100%);
-      color: white;
-    }
-
-    #services {
-      background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
-      color: white;
-    }
-
-    #gallery {
-      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-      color: white;
-      padding-bottom: 60px;
-    }
-
-    #contact {
-      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-      color: white;
-    }
-
-    /* Gallery styles */
-    .gallery-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 30px;
-      gap: 20px;
-    }
-
-    .gallery-container img {
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      transition: transform 0.3s;
-    }
-
-    .gallery-container img:hover {
-      transform: scale(1.05);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Events - Event Planning Services</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        /* Navigation Bar */
+        nav {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #f8bbd0;
+        }
+        
+        /* Home Page */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 700px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #6a1b9a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #4a148c;
+        }
+        
+        /* Services Page */
+        .services-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        
+        .services-content {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .services-list {
+            flex: 1;
+        }
+        
+        .services-list ol {
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        
+        .services-list li {
+            margin-bottom: 15px;
+        }
+        
+        .services-image {
+            flex: 1;
+        }
+        
+        .services-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Gallery Page */
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Contact Page */
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        
+        .contact-info {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-info h3 {
+            color: #6a1b9a;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .contact-details {
+            list-style: none;
+        }
+        
+        .contact-details li {
+            margin-bottom: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-right: 15px;
+            color: #6a1b9a;
+            font-size: 20px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #6a1b9a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        
+        /* Page Content */
+        .page-content {
+            display: none;
+        }
+        
+        .active-page {
+            display: block;
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <div class="logo">Perfect Events</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('services')">Our Services</a></li>
+                <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact Details</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Fixed Navigation Menu -->
-  <nav id="navbar">
-    <div class="logo">Elegant Events</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Page Content -->
-  <section id="home" class="section">
-    <h1>Plan Your Perfect Day</h1>
-    <p>Elegant Events brings your dreams to life — weddings, birthdays, corporate events, and more!</p>
-  </section>
-
-  <section id="services" class="section">
-    <h1>Our Services</h1>
-    <p>We offer full-service event planning: Weddings, Birthday Parties, Corporate Events, Product Launches, and Customized Decor. Let's design your dream event together!</p>
-  </section>
-
-  <section id="gallery" class="section">
-    <h1>Gallery</h1>
-    <div class="gallery-container">
-      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Wedding Event">
-      <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6" alt="Birthday Celebration">
-      <img src="https://images.unsplash.com/photo-1567016548408-9022b2d56c4b" alt="Corporate Event">
-      <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3" alt="Party Setup">
-      <img src="https://images.unsplash.com/photo-1565120130291-37c7e5d0a5f4" alt="Outdoor Event">
+    <!-- Home Page -->
+    <div id="home" class="page-content active-page">
+        <section class="hero">
+            <h1>Your Dream Event, Perfectly Planned</h1>
+            <p>We create unforgettable experiences with meticulous planning and creative designs for weddings, birthdays, and corporate events.</p>
+            <a href="#" onclick="showPage('services')" class="btn">View Services</a>
+        </section>
     </div>
-  </section>
 
-  <section id="contact" class="section">
-    <h1>Contact Us</h1>
-    <p>Ready to plan your event? Reach out to us today and let's start the magic!</p>
-    <p style="margin-top: 20px; font-size: 1.2rem;">
-      📞 <strong>Phone:</strong> <a href="tel:+916379126127" style="color: white; text-decoration: underline;">+91 6379126127</a><br>
-      📧 <strong>Email:</strong> <a href="mailto:abinayarajendran944@gmail.com" style="color: white; text-decoration: underline;">abinayarajendran944@gmail.com</a>
-    </p>
-  </section>
+    <!-- Services Page -->
+    <div id="services" class="page-content">
+        <div class="container">
+            <div class="services-header">
+                <h1>Our Services</h1>
+            </div>
+            <div class="services-content">
+                <div class="services-list">
+                    <ol>
+                        <li>Complete Wedding Planning and Coordination</li>
+                        <li>Birthday Party Planning (All Ages)</li>
+                        <li>Corporate Event Management</li>
+                        <li>Venue Selection and Booking Assistance</li>
+                        <li>Theme Development and Design</li>
+                        <li>Vendor Management and Coordination</li>
+                        <li>Decor and Floral Arrangements</li>
+                        <li>Catering Coordination</li>
+                        <li>Entertainment Planning</li>
+                        <li>Photography and Videography Coordination</li>
+                        <li>Transportation and Accommodation Arrangements</li>
+                        <li>Budget Planning and Management</li>
+                    </ol>
+                </div>
+                <div class="services-image">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wedding Stage Decor">
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <script>
-    // Change navbar style on scroll
-    window.addEventListener('scroll', function() {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-  </script>
+    <!-- Gallery Page -->
+    <div id="gallery" class="page-content">
+        <div class="container">
+            <div class="gallery-header">
+                <h1>Gallery</h1>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wedding Decor">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Birthday Party">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Corporate Event">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Concert Planning">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wedding Table Setting">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Corporate Dinner">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Birthday Balloons">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Outdoor Wedding">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Event Stage">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page-content">
+        <div class="container">
+            <div class="contact-header">
+                <h1>Contact Details</h1>
+            </div>
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <ul class="contact-details">
+                    <li>
+                        <i>📍</i>
+                        <span>123 Event Street, Celebration City, EC 12345</span>
+                    </li>
+                    <li>
+                        <i>📞</i>
+                        <span>+1 (555) 123-4567</span>
+                    </li>
+                    <li>
+                        <i>✉️</i>
+                        <span>info@perfectevents.com</span>
+                    </li>
+                    <li>
+                        <i>🌐</i>
+                        <span>www.perfectevents.com</span>
+                    </li>
+                    <li>
+                        <i>🕒</i>
+                        <span>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                        Saturday: 10:00 AM - 4:00 PM<br>
+                        Sunday: Closed</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Perfect Events. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to show the selected page and hide others
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => {
+                page.classList.remove('active-page');
+            });
+            
+            // Show the selected page
+            document.getElementById(pageId).classList.add('active-page');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
 </body>
 </html>
 
+     
+
+   
   
